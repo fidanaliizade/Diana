@@ -1,11 +1,12 @@
 ﻿using Diana.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Diana.DAL
 {
-	public class AppDbContext :DbContext
+	public class AppDbContext :IdentityDbContext<AppUser>
 	{
-		public AppDbContext(DbContextOptions options) : base(options) { }
+		public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 		public DbSet<Product> Products { get; set; }
 		public DbSet<Category> Categories { get; set; }
 		public DbSet<Material> Materials { get; set; }
