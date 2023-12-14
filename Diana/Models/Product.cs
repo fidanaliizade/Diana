@@ -9,10 +9,11 @@ namespace Diana.Models
 		public string Description { get; set; }
 		public double Price { get; set; }
 		public bool IsDeleted { get; set; }
-		public Category? Category { get; set; }
-		public List<Material>? ProductMaterials { get; set; }
-		public List<Color>? ProductColors { get; set; }
-		public List<Size>? ProductSizes { get; set; }
+        public int CategoryId { get; set; }
+        public Category? Category { get; set; }
+		public List<ProductMaterial>? ProductMaterials { get; set; }
+		public List<ProductColor>? ProductColors { get; set; }
+		public List<ProductSize>? ProductSizes { get; set; }
 		public List<ProductImage>? ProductImages { get; set; }
 	}
 }
